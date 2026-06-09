@@ -1,9 +1,11 @@
 package io.github.junner.slowfallcountdown.mixin;
 
+import io.github.junner.slowfallcountdown.config.SlowfallCountdownConfig;
 import io.github.junner.slowfallcountdown.util.ColorUtils;
 import io.github.junner.slowfallcountdown.util.DelayUtil;
 import io.github.junner.slowfallcountdown.util.ChatUtil;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
@@ -37,7 +39,12 @@ public abstract class PersistentProjectileHitMixin {
 			return;
 		}
 
-		if (!(entityHitResult.getEntity() instanceof LivingEntity target)) {
+		Entity hitEntity = entityHitResult.getEntity();
+		if (!SlowfallCountdownConfig.targetType.matches(hitEntity)) {
+			return;
+		}
+
+		if (!(hitEntity instanceof LivingEntity target)) {
 			return;
 		}
 
