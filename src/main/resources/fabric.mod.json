@@ -11,10 +11,16 @@
 	},
 	"license": "MIT",
 	"icon": "assets/slowfallcountdown/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
 			"io.github.junner.slowfallcountdown.SlowfallCountdownMod"
+		],
+		"client": [
+			"io.github.junner.slowfallcountdown.client.SlowfallCountdownClient"
+		],
+		"modmenu": [
+			"io.github.junner.slowfallcountdown.config.SlowfallCountdownModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -23,6 +29,8 @@
 	"depends": {
 		"minecraft": "~1.21",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"modmenu": "*",
+		"cloth-config2": "*"
 	}
 }

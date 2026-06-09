@@ -1,0 +1,16 @@
+{
+  "category.slowfallcountdown": "Slowfall Countdown",
+  "key.slowfallcountdown.toggle_calculator": "Toggle Calculator",
+  "title.slowfallcountdown.config": "Slowfall Countdown",
+  "category.slowfallcountdown.general": "General",
+  "option.slowfallcountdown.calculator_enabled": "Calculator Enabled",
+  "option.slowfallcountdown.calculator_enabled.tooltip": "Enable or disable slow falling timing notifications.",
+  "option.slowfallcountdown.toggle_keybind": "Toggle Calculator Keybind",
+  "option.slowfallcountdown.toggle_keybind.tooltip": "Uses the same keybinding as Minecraft Controls. It is unbound by default.",
+  "option.slowfallcountdown.calculation_time": "Calculation Time",
+  "option.slowfallcountdown.calculation_time.tooltip": "Seconds before the final reslowfall reminder.",
+  "option.slowfallcountdown.countdown_time": "Countdown Time",
+  "option.slowfallcountdown.countdown_time.tooltip": "Seconds of countdown messages before the final reminder. 0 disables countdown.",
+  "option.slowfallcountdown.player_only_target": "Player Only Target",
+  "option.slowfallcountdown.player_only_target.tooltip": "When enabled, only player hits start the timer. Disable to allow any living entity."
+}
