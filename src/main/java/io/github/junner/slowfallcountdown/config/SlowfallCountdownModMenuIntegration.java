@@ -6,10 +6,15 @@ import io.github.junner.slowfallcountdown.client.SlowfallCountdownClient;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
+import me.shedaniel.clothconfig2.gui.ClothConfigScreen;
+import me.shedaniel.clothconfig2.gui.entries.EmptyEntry;
+import me.shedaniel.clothconfig2.gui.widget.SearchFieldEntry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.text.Text;
+
+import java.util.List;
 
 public class SlowfallCountdownModMenuIntegration implements ModMenuApi {
     @Override
@@ -22,6 +27,8 @@ public class SlowfallCountdownModMenuIntegration implements ModMenuApi {
                 .setParentScreen(parent)
                 .setTitle(Text.translatable("title.slowfallcountdown.config"));
 
+        builder.setGlobalized(false);
+        builder.setAfterInitConsumer(SlowfallCountdownModMenuIntegration::removeSearchField);
         builder.setSavingRunnable(SlowfallCountdownConfig::save);
 
         ConfigCategory general = builder.getOrCreateCategory(Text.translatable("category.slowfallcountdown.general"));
@@ -79,5 +86,28 @@ public class SlowfallCountdownModMenuIntegration implements ModMenuApi {
                 .build());
 
         return builder.build();
+    }
+
+    private static void removeSearchField(Screen screen) {
+        if (!(screen instanceof ClothConfigScreen clothConfigScreen)) {
+            return;
+        }
+
+        List<?> entries = clothConfigScreen.listWidget.children();
+        for (int index = 0; index < entries.size(); index++) {
+            if (!(entries.get(index) instanceof SearchFieldEntry)) {
+                continue;
+            }
+
+            entries.remove(index);
+            if (index > 0 && entries.get(index - 1) instanceof EmptyEntry) {
+                entries.remove(index - 1);
+                index--;
+            }
+            if (index < entries.size() && entries.get(index) instanceof EmptyEntry) {
+                entries.remove(index);
+            }
+            return;
+        }
     }
 }
