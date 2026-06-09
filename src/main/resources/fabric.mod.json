@@ -14,7 +14,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.vz11.Slowfallcountdown"
+			"io.github.junner.slowfallcountdown.SlowfallCountdownMod"
 		]
 	},
 	"mixins": [

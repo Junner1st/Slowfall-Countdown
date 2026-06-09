@@ -1,8 +1,8 @@
-package com.vz11.mixin;
+package io.github.junner.slowfallcountdown.mixin;
 
-import com.vz11.util.ColorUtils;
-import com.vz11.util.DelayUtil;
-import com.vz11.util.ChatUtil;
+import io.github.junner.slowfallcountdown.util.ColorUtils;
+import io.github.junner.slowfallcountdown.util.DelayUtil;
+import io.github.junner.slowfallcountdown.util.ChatUtil;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.Entity;
@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PersistentProjectileEntity.class)
-public abstract class ExampleMixin {
+public abstract class PersistentProjectileHitMixin {
 	@Shadow public abstract void setSound(SoundEvent sound);
 
 	@Unique private ClientPlayerEntity projectileDing$clientPlayer;

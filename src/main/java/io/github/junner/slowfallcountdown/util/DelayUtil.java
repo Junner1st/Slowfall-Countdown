@@ -1,4 +1,4 @@
-package com.vz11.util;
+package io.github.junner.slowfallcountdown.util;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
