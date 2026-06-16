@@ -1,9 +1,9 @@
-package io.github.junner.slowfallcountdown.mixin;
+package com.vz11.mixin;
 
-import io.github.junner.slowfallcountdown.config.SlowfallCountdownConfig;
-import io.github.junner.slowfallcountdown.util.ColorUtils;
-import io.github.junner.slowfallcountdown.util.DelayUtil;
-import io.github.junner.slowfallcountdown.util.ChatUtil;
+import com.vz11.config.SlowfallCountdownConfig;
+import com.vz11.util.ColorUtils;
+import com.vz11.util.DelayUtil;
+import com.vz11.util.ChatUtil;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

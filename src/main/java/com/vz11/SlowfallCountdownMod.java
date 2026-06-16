@@ -1,6 +1,6 @@
-package io.github.junner.slowfallcountdown;
+package com.vz11;
 
-import io.github.junner.slowfallcountdown.config.SlowfallCountdownConfig;
+import com.vz11.config.SlowfallCountdownConfig;
 import net.fabricmc.api.ModInitializer;
 
 public class SlowfallCountdownMod implements ModInitializer {

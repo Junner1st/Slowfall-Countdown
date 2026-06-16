@@ -1,4 +1,4 @@
-package io.github.junner.slowfallcountdown.config;
+package com.vz11.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

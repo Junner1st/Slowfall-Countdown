@@ -1,4 +1,4 @@
-package io.github.junner.slowfallcountdown.util;
+package com.vz11.util;
 
 public class ColorUtils
 {

@@ -1,8 +1,8 @@
-package io.github.junner.slowfallcountdown.config;
+package com.vz11.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import io.github.junner.slowfallcountdown.client.SlowfallCountdownClient;
+import com.vz11.client.SlowfallCountdownClient;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;

@@ -14,13 +14,13 @@
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"io.github.junner.slowfallcountdown.SlowfallCountdownMod"
+			"com.vz11.SlowfallCountdownMod"
 		],
 		"client": [
-			"io.github.junner.slowfallcountdown.client.SlowfallCountdownClient"
+			"com.vz11.client.SlowfallCountdownClient"
 		],
 		"modmenu": [
-			"io.github.junner.slowfallcountdown.config.SlowfallCountdownModMenuIntegration"
+			"com.vz11.config.SlowfallCountdownModMenuIntegration"
 		]
 	},
 	"mixins": [

@@ -1,6 +1,6 @@
-package io.github.junner.slowfallcountdown.client;
+package com.vz11.client;
 
-import io.github.junner.slowfallcountdown.config.SlowfallCountdownConfig;
+import com.vz11.config.SlowfallCountdownConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;

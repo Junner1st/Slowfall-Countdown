@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "io.github.junner.slowfallcountdown.mixin",
+	"package": "com.vz11.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"PersistentProjectileHitMixin"
