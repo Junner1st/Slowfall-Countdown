@@ -5,6 +5,8 @@
   "category.slowfallcountdown.general": "General",
   "option.slowfallcountdown.calculator_enabled": "Calculator Enabled",
   "option.slowfallcountdown.calculator_enabled.tooltip": "Enable or disable slow falling timing notifications.",
+  "option.slowfallcountdown.reset_on_local_death": "Reset When You Die",
+  "option.slowfallcountdown.reset_on_local_death.tooltip": "Cancel the active countdown when your local player dies.",
   "option.slowfallcountdown.toggle_keybind": "Toggle Calculator Keybind",
   "option.slowfallcountdown.toggle_keybind.tooltip": "Uses the same keybinding as Minecraft Controls. It is unbound by default.",
   "option.slowfallcountdown.calculation_time": "Calculation Time",

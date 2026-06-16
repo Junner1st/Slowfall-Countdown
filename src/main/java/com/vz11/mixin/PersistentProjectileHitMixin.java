@@ -73,7 +73,12 @@ public abstract class PersistentProjectileHitMixin {
 
 	private boolean isCountdownTargetActive(UUID localPlayerUuid, UUID targetUuid, int targetEntityId) {
 		MinecraftClient client = MinecraftClient.getInstance();
-		if (client.world == null || client.player == null || !client.player.getUuid().equals(localPlayerUuid)) {
+		if (client.world == null) {
+			return false;
+		}
+
+		if (SlowfallCountdownConfig.resetOnLocalPlayerDeath
+				&& (client.player == null || !client.player.isAlive() || !client.player.getUuid().equals(localPlayerUuid))) {
 			return false;
 		}
 

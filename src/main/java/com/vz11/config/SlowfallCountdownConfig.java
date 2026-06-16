@@ -18,6 +18,7 @@ public class SlowfallCountdownConfig {
     private static final Path CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve("slowfallcountdown.json");
 
     public static boolean calculatorEnabled = true;
+    public static boolean resetOnLocalPlayerDeath = true;
     public static int calculationTimeSeconds = 30;
     public static int countdownSeconds = 5;
     public static TargetType targetType = TargetType.PLAYERS;
@@ -36,6 +37,7 @@ public class SlowfallCountdownConfig {
             }
 
             calculatorEnabled = data.calculatorEnabled;
+            resetOnLocalPlayerDeath = data.resetOnLocalPlayerDeath;
             calculationTimeSeconds = Math.max(1, data.calculationTimeSeconds);
             countdownSeconds = Math.max(0, data.countdownSeconds);
             targetType = data.targetType == null ? TargetType.PLAYERS : data.targetType;
@@ -89,6 +91,7 @@ public class SlowfallCountdownConfig {
 
     private static class ConfigData {
         boolean calculatorEnabled = SlowfallCountdownConfig.calculatorEnabled;
+        boolean resetOnLocalPlayerDeath = SlowfallCountdownConfig.resetOnLocalPlayerDeath;
         int calculationTimeSeconds = SlowfallCountdownConfig.calculationTimeSeconds;
         int countdownSeconds = SlowfallCountdownConfig.countdownSeconds;
         TargetType targetType = SlowfallCountdownConfig.targetType;

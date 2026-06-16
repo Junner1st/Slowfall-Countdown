@@ -43,6 +43,15 @@ public class SlowfallCountdownModMenuIntegration implements ModMenuApi {
                 .setSaveConsumer(value -> SlowfallCountdownConfig.calculatorEnabled = value)
                 .build());
 
+        general.addEntry(entryBuilder.startBooleanToggle(
+                        Text.translatable("option.slowfallcountdown.reset_on_local_death"),
+                        SlowfallCountdownConfig.resetOnLocalPlayerDeath
+                )
+                .setDefaultValue(true)
+                .setTooltip(Text.translatable("option.slowfallcountdown.reset_on_local_death.tooltip"))
+                .setSaveConsumer(value -> SlowfallCountdownConfig.resetOnLocalPlayerDeath = value)
+                .build());
+
         general.addEntry(entryBuilder.fillKeybindingField(
                         Text.translatable("option.slowfallcountdown.toggle_keybind"),
                         SlowfallCountdownClient.TOGGLE_CALCULATOR_KEYBIND
